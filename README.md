@@ -11,7 +11,7 @@ modified: 2014 January 20
 
 ---
 
-Cubic Shatter
+Filter Selection
 =========
 
 ![FilterSelection](http://www.pixelcrusher.de/files/FilterSelection.png)
