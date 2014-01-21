@@ -41,8 +41,7 @@
 ----------------------------------------------------------------------------------------------------------------------
 */
 
-try ( destroyDialog FilterSelection )
-	catch (	MessageBox "Dialog not found!" )
+try ( destroyDialog FilterSelection ) catch ()
 
 rollout FilterSelection "Filter Selection" width:150 height:235
 (

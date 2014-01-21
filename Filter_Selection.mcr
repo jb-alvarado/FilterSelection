@@ -46,8 +46,8 @@ macroScript FilterSelection
  ButtonText:"FilterSelection"
  Tooltip:"Filter Object Selection By Different Types"
 (
-try ( destroyDialog FilterSelection )
-	catch (	MessageBox "Dialog not found!" )
+global FilterSelection
+try ( destroyDialog FilterSelection ) catch ()
 
 rollout FilterSelection "Filter Selection" width:150 height:235
 (
