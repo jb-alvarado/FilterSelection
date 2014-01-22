@@ -45,7 +45,7 @@ try ( destroyDialog FilterSelection ) catch ()
 
 rollout FilterSelection "Filter Selection" width:150 height:235
 (
-	local selg = for o in geometry where not o.isHiddenInVpt collect o
+	local selg = for o in geometry where not o.isHiddenInVpt and not o.isFrozen collect o
 	local newSelection = #()
 	
 	groupBox grpSelectSame "Select By Same Type" pos:[10,10] width:130 height:120
