@@ -51,7 +51,7 @@ try ( destroyDialog FilterSelection ) catch ()
 
 rollout FilterSelection "Filter Selection" width:150 height:235
 (
-	local sel = for o in geometry where not o.isHiddenInVpt collect o
+	local selg = for o in geometry where not o.isHiddenInVpt collect o
 	local newSelection = #()
 	
 	groupBox grpSelectSame "Select By Same Type" pos:[10,10] width:130 height:120
@@ -118,16 +118,16 @@ rollout FilterSelection "Filter Selection" width:150 height:235
 	
 	on btnSelect pressed do (
 		newSelection = #()
-		for i = 1 to sel.count do (
-			objMin = sel[i].min
-			objMax = sel[i].max
+		for i = 1 to selg.count do (
+			objMin = selg[i].min
+			objMax = selg[i].max
 			objX = ( objMax.x - objMin.x )
 			objY = ( objMax.y - objMin.y )
 			objZ = ( objMax.z - objMin.z )
 			
 			if ( objX > spnMin.value AND objY > spnMin.value AND objZ > spnMin.value ) do (
 				if ( objX < spnMax.value AND objY < spnMax.value AND objZ < spnMax.value ) do (
-					join newSelection #( sel[i] )
+					join newSelection #( selg[i] )
 					)
 				)
 			)
